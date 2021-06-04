@@ -39,4 +39,3 @@ export function HomepageCollectionsGrid({ collections }) {
     </div>
   );
 }
-// fixed
