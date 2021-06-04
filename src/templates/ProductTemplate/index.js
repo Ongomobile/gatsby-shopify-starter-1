@@ -1,7 +1,13 @@
 /* eslint-disable  jsx-a11y/no-onchange*/
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Layout, ImageGallery, ProductQuantityAdder } from 'components';
+import {
+  Layout,
+  ImageGallery,
+  ProductQuantityAdder,
+  Button,
+  SEO,
+} from 'components';
 import { Grid, SelectWrapper, Price } from './styles';
 import CartContext from 'context/CartContext';
 import { navigate, useLocation } from '@reach/router';
@@ -11,19 +17,7 @@ import queryString from 'query-string';
 export const query = graphql`
   query ProductQuery($shopifyId: String) {
     shopifyProduct(shopifyId: { eq: $shopifyId }) {
-      shopifyId
-      title
-      description
-      images {
-        id
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
+      ...ShopifyProductFields
     }
   }
 `;
@@ -64,6 +58,11 @@ export default function ProductTemplate(props) {
 
   return (
     <Layout>
+      <SEO
+        description={props.data.shopifyProduct.description}
+        title={props.data.shopifyProduct.title}
+      />
+      <Button onClick={() => navigate(-1)}>Back to products</Button>
       <Grid>
         <div>
           <h1>{props.data.shopifyProduct.title}</h1>
