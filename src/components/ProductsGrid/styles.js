@@ -5,7 +5,7 @@ export const ProductsGridWrapper = styled.section`
   grid-gap: 5px;
   grid-template-columns: 1fr;
   @media (min-width: 384px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
