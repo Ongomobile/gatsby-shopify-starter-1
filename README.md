@@ -1,14 +1,21 @@
-# Gatsby Shopify starter
+# Gatsby Headless Shopify
 
-**Getting started**
+I always wanted to learn how Shopify works. So I did some reasearch and built my first store.
+I really like the idea of going with a headless application.
 
-First you'll need to add a `.env` file to the root of your project consisting of:
+## How I worked on this project
 
-```
-GATSBY_SHOP_NAME=
-GATSBY_ACCESS_TOKEN=
-```
+- I decided to go with Gastby on the front end
+- For the backend I used Shopify GraphQl API
+- Referenced the Shopify Docs and found a great tutorial
+- Deployed to Netlify
 
-And enter the appropriate values from your own shopify store.
+## How to navigate this project
 
-Then run `gatsby develop` and you're off to the races!
+- The state is managed with the [context API](https://github.com/Ongomobile/gatsby-shopify-starter-1/tree/master/src/context)
+- Responsive CSS using styled-components:[UI Components](https://github.com/Ongomobile/gatsby-shopify-starter-1/tree/master/src/components)
+- Default product [template](https://github.com/Ongomobile/gatsby-shopify-starter-1/tree/master/src/templates/ProductTemplate)
+
+## Live Store
+
+[Groovy Hats](https://jolly-chandrasekhar-37848e.netlify.app/)
